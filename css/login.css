@@ -58,10 +58,10 @@ button:hover {
     background: #0056b3;
 }
 
-#esqueceu-senha{
+#esqueceu-senha, #voltar-login{
     padding: 20px 20px 0px 20px;
 }
 
-#esqueceu-senha:hover{
+#esqueceu-senha:hover, #voltar-login:hover{
     color: black;
 }
