@@ -19,15 +19,16 @@ body {
     flex-direction: column;
     align-items: center;
     padding-top: 20px;
+    padding-bottom: 20px; /* Adiciona um padding no fundo da barra lateral */
+    box-sizing: border-box; /* Inclui o padding na altura total */
 }
-
-
 
 .sidebar ul {
     list-style: none;
     padding: 0;
     margin: 0;
     width: 100%;
+    flex: 1; /* Faz com que a lista ocupe o espaço disponível */
 }
 
 .sidebar ul li {
@@ -46,9 +47,15 @@ body {
     color: #fff;
 }
 
+/* Adiciona uma margem superior ao link "Sair" para que ele fique na parte inferior */
+.sidebar-footer-link {
+    margin-top: auto; /* Empurra o link para o final da barra lateral */
+    padding: 10px;
+}
+
 /* Conteúdo principal */
 .main-content {
-    margin-left: 60px; /* Espaço para a barra lateral */
+    margin-left: 80px; /* Espaço para a barra lateral */
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -88,4 +95,45 @@ header span {
 /* Conteúdo principal */
 main {
     padding: 20px;
+}
+
+/* Estilos para a seção de promoção de funcionário */
+.promotion-post {
+    margin: auto;
+    position: relative;
+    background-color: #4e77ff;
+    width: 1000px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+}
+
+.promotion-image-wrapper {
+    width: 100%;
+    max-width: 800px; /* Limita o tamanho máximo da imagem */
+    margin: auto;
+}
+
+.promotion-image {
+    width: 100%;
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 8px;
+}
+
+.promotion-text {
+    color: white;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6); /* Fundo escuro semi-transparente */
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+}
+
+.promotion-text h2,
+.promotion-text h3 {
+    margin: 0;
+}
+
+.promotion-text p {
+    margin: 5px 0;
 }
