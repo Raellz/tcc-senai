@@ -99,24 +99,25 @@ main {
 
 /* Estilos para a seção de promoção de funcionário */
 .promotion-post {
-    margin: auto;
+    margin: 20px auto;
     position: relative;
     background-color: #4e77ff;
-    width: 1000px;
+    width: 80%;
+    max-width: 1000px;
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-
+    padding: 20px;
 }
 
 .promotion-image-wrapper {
     width: 100%;
-    max-width: 800px; /* Limita o tamanho máximo da imagem */
+    max-width: 800px;
     margin: auto;
 }
 
 .promotion-image {
     width: 100%;
-    height: auto; /* Mantém a proporção da imagem */
+    height: auto;
     border-radius: 8px;
 }
 
@@ -127,6 +128,7 @@ main {
     padding: 20px;
     border-radius: 8px;
     width: 90%;
+    margin: 0 auto;
 }
 
 .promotion-text h2,
@@ -136,4 +138,82 @@ main {
 
 .promotion-text p {
     margin: 5px 0;
+}
+
+/* Estilos para a seção de calendário */
+.calendar-post {
+    margin: 20px auto;
+    position: relative;
+    background-color: #ffffff;
+    width: 80%;
+    max-width: 1000px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    text-align: center;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.calendar-header h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.calendar-header button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.calendar-header button:hover {
+    background-color: #0056b3;
+}
+
+.calendar {
+    width: 100%;
+}
+
+.calendar table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.calendar th, .calendar td {
+    width: 14.28%;
+    height: 100px;
+    border: 1px solid #ddd;
+    text-align: center;
+    vertical-align: top;
+}
+
+.calendar th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+.calendar td {
+    padding: 5px;
+    position: relative;
+}
+
+.calendar td .event {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    font-size: 12px;
+    color: #ff0000;
+    background-color: #ffffff;
+    padding: 2px 4px;
+    border-radius: 4px;
 }
