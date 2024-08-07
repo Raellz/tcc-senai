@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Página Principal</title>
+    <style>
+        .search-container {
+            position: relative;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+        .search-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .suggestions {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-top: none;
+            z-index: 1000;
+            max-height: 150px;
+            overflow-y: auto;
+        }
+        .suggestions div {
+            padding: 10px;
+            cursor: pointer;
+        }
+        .suggestions div:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra lateral fixa -->
+    <aside class="sidebar">
+        <ul>
+            <li><a href="index.html" title="Página Inicial"><img src="imagens/pag-inicial-ico.png" alt="Página Inicial"></a></li>
+            <li><a href="pesquisa-func.html" title="Consultar Status"><img src="imagens/status.png" alt="Consultar Status"></a></li>
+        </ul>
+        <a href="#" title="Sair" class="sidebar-footer-link"><img src="imagens/exit.png" alt="Sair"></a>
+    </aside>
+
+    <!-- Conteúdo principal -->
+    <div class="main-content">
+        <!-- Header -->
+        <header>
+            <img src="imagens/logo-1.png" alt="Logo" class="logo" style="width: 200px; height: 200px">
+            <div class="user-info">
+                <img src="imagens/usuario.png" alt="Foto do Usuário" class="user-photo">
+                <span>Olá, Galera</span>
+            </div>
+        </header>
+
+        <!-- Conteúdo principal -->
+        <main>
+            <div class="search-container">
+                <input type="text" id="searchInput" class="search-input" placeholder="Digite o nome do funcionário" onkeyup="showSuggestions(this.value)">
+                <div id="suggestions" class="suggestions"></div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const employees = ["Ana Souza", "Bruno Silva", "Carlos Oliveira", "Débora Lima", "Eduardo Costa"];
+
+        function showSuggestions(value) {
+            const suggestionsBox = document.getElementById('suggestions');
+            suggestionsBox.innerHTML = '';
+
+            if (value.length === 0) return;
+
+            const filteredEmployees = employees.filter(employee => employee.toLowerCase().includes(value.toLowerCase()));
+
+            filteredEmployees.forEach(employee => {
+                const div = document.createElement('div');
+                div.textContent = employee;
+                div.onclick = () => {
+                    document.getElementById('searchInput').value = employee;
+                    suggestionsBox.innerHTML = '';
+                };
+                suggestionsBox.appendChild(div);
+            });
+        }
+    </script>
+</body>
+</html>
