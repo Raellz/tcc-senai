@@ -8,10 +8,21 @@
     <title>Página Principal</title>
 </head>
 <body>
+
+    <?php   
+    session_start();
+
+    // Verifica se o usuário está logado
+    if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+        // Se não estiver logado, redireciona para a página de login
+        header("Location: backend/login.php");
+        exit;
+    }
+    ?>
     <!-- Barra lateral fixa -->
     <aside class="sidebar">
         <ul>
-            <li><a href="index.html" title="Página Inicial"><img src="imagens/pag-inicial-ico.png" alt="Página Inicial"></a></li>
+            <li><a href="index.php" title="Página Inicial"><img src="imagens/pag-inicial-ico.png" alt="Página Inicial"></a></li>
             <li><a href="status.html" title="Consultar Status"><img src="imagens/status.png" alt="Consultar Status"></a></li>
         </ul>
         <a href="#" title="Sair" class="sidebar-footer-link"><img src="imagens/exit.png" alt="Sair"></a>
