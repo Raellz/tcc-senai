@@ -22,7 +22,7 @@
     <!-- Barra lateral fixa -->
     <aside class="sidebar">
         <ul>
-            <li><a href="index.php" title="Página Inicial"><img src="imagens/pag-inicial-ico.png" alt="Página Inicial"></a></li>
+            <li><a href="index.html" title="Página Inicial"><img src="imagens/pag-inicial-ico.png" alt="Página Inicial"></a></li>
             <li><a href="status.html" title="Consultar Status"><img src="imagens/status.png" alt="Consultar Status"></a></li>
         </ul>
         <a href="#" title="Sair" class="sidebar-footer-link"><img src="imagens/exit.png" alt="Sair"></a>
