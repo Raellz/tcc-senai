@@ -13,7 +13,7 @@
             <h1>Login</h1>
         </header>
         <main>
-            <form action="backend/login.php" method="post">
+            <form action="../frontend/index.php" method="post">
             <input type="text" name="matricula" id="matricula" placeholder="Matrícula" required>
                 <input type="password" id="passoword" name="password" placeholder="Senha" required>
                 <button type="submit">Entrar</button>
@@ -37,6 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Buscar o usuário no banco de dados
     $sql = "SELECT * FROM funcionarios WHERE matricula = '$matricula'";
     $result = $conn->query($sql);
+    $slq2 = "SELECT * FROM funcionarios WHERE id = '$id'";
 
     if ($result->num_rows > 0) {
         // Verificar a senha
@@ -47,16 +48,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             
             // Inicia a sessão e armazena as informações do usuário
             session_start();
-            $_SESSION['id_usuario'] = $row['id'];
             $_SESSION['nome'] = $row['nome'];
             $_SESSION['matricula'] = $row['matricla'];
+            $_SESSION['loggedin'] = true; // Define a variável de sessão como true
+            $_SESSION['id_usuario'] = $row['id']; // Armazena o ID do usuário na sessão
             
             // Redirecionar para a página de usuário ou dashboard
 
-            header("Location: ../tcc-senai/frontend");
+            header("Location: ../frontend/index.php");
             
 
             exit();
+            
         } else {
             // Senha incorreta
             echo "Senha incorreta.";

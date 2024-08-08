@@ -3,19 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="../css/index.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>Página Principal</title>
 </head>
 <body>
 
-    <?php   
-    session_start();
+<?php   
+    session_destroy();
 
     // Verifica se o usuário está logado
+    $_SESSION['loggedin'] == true;
+
     if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
         // Se não estiver logado, redireciona para a página de login
-        header("Location: backend/login.php");
+        header("Location: ../backend/login.php");
         exit;
     }
     ?>
