@@ -13,64 +13,54 @@
             <h1>Login</h1>
         </header>
         <main>
-            <form action="../frontend/index.php" method="post">
-            <input type="text" name="matricula" id="matricula" placeholder="Matrícula" required>
-                <input type="password" id="passoword" name="password" placeholder="Senha" required>
+            <form action="../backend/login.php" method="post">
+                <input type="text" name="matricula" id="matricula" placeholder="Matrícula" required>
+                <input type="password" id="password" name="password" placeholder="Senha" required>
                 <button type="submit">Entrar</button>
             </form>
         </main>
-            <a href="esqueceu-senha.html" id="esqueceu-senha">Esqueci minha senha!</a>
+        <a href="esqueceu-senha.html" id="esqueceu-senha">Esqueci minha senha!</a>
     </div>
 </body>
 </html>
 
 
 <?php 
+    include 'conexao.inc';
 
-include 'conexao.inc';
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // Receber e sanitizar os dados
+        $matricula = $conn->real_escape_string($_POST['matricula']);
+        $senha = $conn->real_escape_string($_POST['password']);
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Receber e sanitizar os dados
-    $matricula = $conn->real_escape_string($_POST['matricula']);
-    $senha = $conn->real_escape_string($_POST['password']);
-    
-    // Buscar o usuário no banco de dados
-    $sql = "SELECT * FROM funcionarios WHERE matricula = '$matricula'";
-    $result = $conn->query($sql);
-    $slq2 = "SELECT * FROM funcionarios WHERE id = '$id'";
+        // Buscar o usuário no banco de dados
+        $sql = "SELECT * FROM funcionarios WHERE matricula = '$matricula'";
+        $result = $conn->query($sql);
 
-    if ($result->num_rows > 0) {
-        // Verificar a senha
-        $row = $result->fetch_assoc();
-
-        if ($senha === $row['senha']) {
-            // Login realizado com sucesso
-            
-            // Inicia a sessão e armazena as informações do usuário
-            session_start();
-            $_SESSION['nome'] = $row['nome'];
-            $_SESSION['matricula'] = $row['matricla'];
-            $_SESSION['loggedin'] = true; // Define a variável de sessão como true
-            $_SESSION['id_usuario'] = $row['id']; // Armazena o ID do usuário na sessão
-            
-            // Redirecionar para a página de usuário ou dashboard
-
-            header("Location: ../frontend/index.php");
-            
-
-            exit();
-            
+        if ($result->num_rows > 0) {
+            // Verificar a senha
+            $row = $result->fetch_assoc();
+            if ($senha == $row['senha']) {
+                // Login realizado com sucesso
+                session_start();
+                $_SESSION['nome'] = $row['nome'];
+                $_SESSION['matricula'] = $row['matricula'];
+                $_SESSION['loggedin'] = true;
+                $_SESSION['id_usuario'] = $row['id'];
+                
+                // Redirecionar para a página de usuário ou dashboard
+                header("Location: ../frontend/index.php");
+                exit();
+            } else {
+                // Senha incorreta
+                echo "Senha incorreta.";
+            }
         } else {
-            // Senha incorreta
-            echo "Senha incorreta.";
+            // Usuário não encontrado
+            echo "Usuário não encontrado.";
         }
-    } else {
-        // Usuário não encontrado
-        echo "Usuário não encontrado.";
     }
-}
 
-// Fecha a conexão
-$conn->close();
-
+    // Fecha a conexão
+    $conn->close();
 ?>

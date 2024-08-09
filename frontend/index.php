@@ -10,17 +10,16 @@
 <body>
 
 <?php   
-    session_destroy();
+    session_start();
 
     // Verifica se o usuário está logado
-    $_SESSION['loggedin'] == true;
-
     if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
         // Se não estiver logado, redireciona para a página de login
         header("Location: ../backend/login.php");
         exit;
     }
-    ?>
+?>
+
     <!-- Barra lateral fixa -->
     <aside class="sidebar">
         <ul>
