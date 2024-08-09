@@ -7,6 +7,8 @@ const employees = [
     { name: "Maria Gabriela", photo: "imagens/maria-gabriela.jpg", hireDate: "30/07/2023", position: "Coordenadora", courses: [{name: "Curso K", date: "30/01/2024", status: "Concluído"}, {name: "Curso L", date: "30/09/2023", status: "Pendente"}] }
 ];
 
+let lastUpdateTime = ''; // Variável para armazenar o horário da última atualização
+
 function showSuggestions(value) {
     const suggestionsBox = document.getElementById('suggestions');
     suggestionsBox.innerHTML = '';
@@ -89,7 +91,7 @@ window.onclick = function(event) {
 function updateLastUpdated() {
     const lastUpdatedDiv = document.getElementById('lastUpdated');
     const now = new Date();
-    const formattedDate = now.toLocaleString('pt-BR', {
+    lastUpdateTime = now.toLocaleString('pt-BR', {
         day: '2-digit',
         month: '2-digit',
         year: 'numeric',
@@ -98,7 +100,7 @@ function updateLastUpdated() {
         second: '2-digit'
     });
 
-    lastUpdatedDiv.textContent = `Última atualização: ${formattedDate}`;
+    lastUpdatedDiv.textContent = `Última atualização: ${lastUpdateTime}`;
 }
 
 // Atualiza imediatamente quando a página carrega
@@ -106,3 +108,8 @@ updateLastUpdated();
 
 // Atualiza a cada minuto (60.000 milissegundos)
 setInterval(updateLastUpdated, 60000);
+
+// Adiciona o evento ao botão para mostrar a última atualização
+document.getElementById('showLastUpdatedBtn').addEventListener('click', function() {
+    alert(`Última atualização: ${lastUpdateTime}`);
+});
