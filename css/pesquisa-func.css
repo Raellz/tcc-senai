@@ -181,3 +181,39 @@ div#conteiner {
         font-size: 16px;
     }
 }
+
+#lastUpdatedContainer {
+    position: fixed;
+    margin-bottom: 2em;
+    bottom: 10px;
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+#lastUpdatedContainer .last-updated {
+    font-size: 16px;
+    color: white;
+}
+
+#lastUpdatedContainer .styled-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#lastUpdatedContainer .styled-button:hover {
+    background-color: #45a049;
+}
+
+#lastUpdatedContainer .styled-button:active {
+    background-color: #3e8e41;
+}
