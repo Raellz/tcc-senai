@@ -183,22 +183,23 @@ div#conteiner {
 }
 
 #lastUpdatedContainer {
+    position: fixed;
+    margin-bottom: 2em;
+    bottom: 10px;
     display: flex;
     align-items: center;
-    gap: 10px;
-    margin: 20px 0;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 1000;
 }
 
-.last-updated {
+#lastUpdatedContainer .last-updated {
     font-size: 16px;
-    color: #4a4a4a;
-    background-color: #f0f0f0;
-    padding: 10px 20px;
-    border-radius: 5px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    color: white;
 }
 
-.styled-button {
+#lastUpdatedContainer .styled-button {
     background-color: #4CAF50;
     color: white;
     border: none;
@@ -206,14 +207,13 @@ div#conteiner {
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
 }
 
-.styled-button:hover {
+#lastUpdatedContainer .styled-button:hover {
     background-color: #45a049;
 }
 
-.styled-button:active {
+#lastUpdatedContainer .styled-button:active {
     background-color: #3e8e41;
 }

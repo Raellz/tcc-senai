@@ -12,45 +12,59 @@
     <!-- Barra lateral fixa -->
     <aside class="sidebar">
         <ul>
+            <!-- Links para outras páginas ou funcionalidades -->
             <li><a href="index.html" title="Página Inicial"><img src="imagens/pag-inicial-ico.png" alt="Página Inicial"></a></li>
             <li><a href="pesquisa-func.html" title="Consultar Status"><img src="imagens/status.png" alt="Consultar Status"></a></li>
         </ul>
+        <!-- Link para sair ou desconectar -->
         <a href="#" title="Sair" class="sidebar-footer-link"><img src="imagens/exit.png" alt="Sair"></a>
     </aside>
 
     <!-- Conteúdo principal -->
     <div class="main-content">
-        <!-- Header -->
+        <!-- Cabeçalho com logotipo e informações do usuário -->
         <header>
+            <!-- Logotipo da empresa ou aplicação -->
             <img src="imagens/logo-1.png" alt="Logo" class="logo" style="width: 200px; height: 200px">
+            <!-- Informações do usuário -->
             <div class="user-info">
                 <img src="imagens/usuario.png" alt="Foto do Usuário" class="user-photo">
                 <span>Olá, Galera</span>
             </div>
         </header>
 
-        <!-- Conteúdo principal -->
+        <!-- Conteúdo principal da página -->
         <main>
             <div id="conteiner">
+                <!-- Barra de pesquisa -->
                 <div class="search-container">
+                    <!-- Campo de entrada para pesquisa -->
                     <input type="text" id="searchInput" class="search-input" placeholder="Digite o nome do funcionário" onkeyup="showSuggestions(this.value)">
+                    <!-- Botão para iniciar a pesquisa -->
                     <button class="search-button" onclick="searchEmployee()" style="margin-left: 5px;">Pesquisar</button>
                 </div>
+                <!-- Div onde os resultados da pesquisa serão exibidos -->
                 <div id="results" class="results"></div>
             </div>
         </main>
     </div>
 
-    <!-- Modal -->
+    <!-- Modal para exibir informações detalhadas -->
     <div id="employeeModal" class="modal">
         <div class="modal-content">
             <!-- Conteúdo da modal será preenchido dinamicamente -->
         </div>
     </div>
 
-    <div id="lastUpdated" class="last-updated"></div>
-    <button id="showLastUpdatedBtn">Mostrar Última Atualização</button>
-    <script src="scripts/pesquisa-func.js"></script>
+    <!-- Contêiner para exibir a última atualização e botão de sincronização -->
+    <div id="lastUpdatedContainer">
+        <!-- Texto que exibe a última vez que os dados foram atualizados -->
+        <div id="lastUpdated" class="last-updated"></div>
+        <!-- Botão para sincronizar os dados e atualizar a data/hora -->
+        <button id="showLastUpdatedBtn" class="styled-button">Sincronizar Agora!</button>
+    </div>
 
+    <!-- Importação do arquivo JavaScript -->
+    <script src="scripts/pesquisa-func.js"></script>
 </body>
 </html>
