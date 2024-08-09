@@ -19,7 +19,7 @@
                 <button type="submit">Entrar</button>
             </form>
         </main>
-        <a href="esqueceu-senha.html" id="esqueceu-senha">Esqueci minha senha!</a>
+        <a href="../esqueceu-senha.html" id="esqueceu-senha">Esqueci minha senha!</a>
     </div>
 </body>
 </html>
