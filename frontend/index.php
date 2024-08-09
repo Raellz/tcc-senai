@@ -23,19 +23,19 @@
     <!-- Barra lateral fixa -->
     <aside class="sidebar">
         <ul>
-            <li><a href="index.html" title="Página Inicial"><img src="imagens/pag-inicial-ico.png" alt="Página Inicial"></a></li>
-            <li><a href="status.html" title="Consultar Status"><img src="imagens/status.png" alt="Consultar Status"></a></li>
+            <li><a href="index.html" title="Página Inicial"><img src="../imagens/pag-inicial-ico.png" alt="Página Inicial"></a></li>
+            <li><a href="status.html" title="Consultar Status"><img src="../imagens/status.png" alt="Consultar Status"></a></li>
         </ul>
-        <a href="#" title="Sair" class="sidebar-footer-link"><img src="imagens/exit.png" alt="Sair"></a>
+        <a href="#" title="Sair" class="sidebar-footer-link"><img src="../imagens/exit.png" alt="Sair"></a>
     </aside>
 
     <!-- Conteúdo principal -->
     <div class="main-content">
         <!-- Header -->
         <header>
-            <img src="imagens/logo-1.png" alt="Logo" class="logo" style="width: 200px; height: 200px">
+            <img src="../imagens/logo-1.png" alt="Logo" class="logo" style="width: 200px; height: 200px">
             <div class="user-info">
-                <img src="imagens/usuario.png" alt="Foto do Usuário" class="user-photo">
+                <img src="../imagens/usuario.png" alt="Foto do Usuário" class="user-photo">
                 <span>Olá, Galera</span>
             </div>
         </header>
@@ -45,7 +45,7 @@
             <!-- Seção de promoção de funcionário -->
             <section class="promotion-post">
                 <div class="promotion-image-wrapper">
-                    <img src="imagens/post-funcionario.jpg" alt="Funcionário Promovido" class="promotion-image">
+                    <img src="../imagens/post-funcionario.jpg" alt="Funcionário Promovido" class="promotion-image">
                     <div class="promotion-text">
                         <h2>Parabéns ao Funcionário Promovido!</h2>
                         <h3>Pedro Henrique</h3>
