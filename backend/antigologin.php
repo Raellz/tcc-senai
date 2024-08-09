@@ -3,34 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos/style.css">
-    <link rel="stylesheet" href="estilos/media-query.css">
-    <title>Polpa de Fruta</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Login!</title>
 </head>
 <body>
-    <div id="logo">
-        <img src="imagens/logo-polpa.png" alt="Logo da Marca Polpa de Fruta">
+    <div class="container">
+        <header>
+            <h1>Login</h1>
+        </header>
+        <main>
+            <form action="../backend/login.php" method="post">
+                <input type="text" name="matricula" id="matricula" placeholder="Matrícula" required>
+                <input type="password" id="password" name="password" placeholder="Senha" required>
+                <button type="submit">Entrar</button>
+            </form>
+        </main>
+        <a href="../esqueceu-senha.html" id="esqueceu-senha">Esqueci minha senha!</a>
     </div>
-    <main id="card">
-        <form action="../backend/login.php" method="post">
-            <div id="login">
-                <p id="welcome">Bem vindo!</p>
-                <input class="inputLogin" id="numero" name="matricula" oninput="validarNumero(this)" type="text" maxlength="12" placeholder="Seu código de matrícula">
-            
-                <input class="inputLogin" id="password" name="password" type="password" placeholder="Digite sua senha">
-                <input id="entrar" type="submit" value="Entrar">
-                <p class="forgot"><a href="../esqueceu-senha.html" class="forgot">Esqueci a senha</a></p>
-            </div>
-        </form>
-    </main>
 </body>
 </html>
-
-<script>
-    function validarNumero(input) {
-        input.value = input.value.replace(/\D/g, '');
-    }
-</script>
 
 
 <?php 

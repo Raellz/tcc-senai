@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FDFBF0;
+}
+
+main#card {
+    display: flex;
+    justify-content: center;
+    min-width: 350px;
+    height: 450px;
+    background-color: #FFEDDA;
+    padding: 20px;
+}
+
+form {
+    display: flex;
+}
+
+p#welcome {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    padding: 15px;
+    max-width: 165px;
+    text-align: center;
+    color: white;
+    background-color: #F58C2D;
+    font-family: system-ui,'Segoe UI','Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bolder;
+    border-radius: 3px;
+}
+
+#login {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+ main > div#login > input.inputLogin {
+    padding: 13px 13px 13px 13px;
+    width: 250px;
+    display: flex;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    outline: none;
+    background-color: #F2BD82;
+    margin-bottom: -15px;
+}
+
+input::placeholder {
+    color: #FAEED9;
+    font-family: system-ui,'Segoe UI','Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14.5px;
+    text-align: center;
+}
+
+#entrar {
+    background-color: #F69F4F;
+    border: 0px;
+    padding: 15px 30px 15px 30px;
+    border-radius: 3px;
+    font-weight: bolder;
+    color: white;
+    font-size: 16px;
+}
+
+#entrar:hover {
+    cursor: pointer;
+}
+
+a.forgot {
+    color: white;
+    background-color: #F2BD82;
+    padding: 5px 15px 5px 15px;
+    border-radius: 3px;
+}
+
+#logo {
+    margin-right: 5vw;
+}
