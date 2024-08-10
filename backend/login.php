@@ -19,7 +19,7 @@
             
                 <input class="inputLogin" id="password" name="password" type="password" placeholder="Digite sua senha">
                 <input id="entrar" type="submit" value="Entrar">
-                <p class="forgot"><a href="../esqueceu-senha.html" class="forgot">Esqueci a senha</a></p>
+                <p class="forgot"><a href="esqueceu-senha.html" class="forgot">Esqueci a senha</a></p>
             </div>
         </form>
     </main>

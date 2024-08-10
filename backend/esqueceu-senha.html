@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style-esqueceu.css">
+    <link rel="stylesheet" href="estilos/media-query.css">
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <title>Polpa de Fruta</title>
+    <style>
+        
+
+        @font-face {
+            font-family: Boriboon;
+            src: url(../fonts/BoriboonDemoBold-MVemP.otf) format('opentype')
+            url(../fonts/BoriboonDemoBlack-8M1wA.otf) format('opentype');
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: bold;
+        }
+
+        div#login {
+            display: flex;
+        }
+
+        p {
+            flex-wrap: wrap;
+            word-wrap: break-word;
+            font-size: large;
+            max-width: 15rem;
+        }
+
+        h1 {
+            color: #A64C14;
+            max-width: 10rem;
+            text-align: center;
+            margin: 0;
+        }
+
+        a {
+            color: #A64C14;
+        }
+    </style>
+</head>
+<body>
+    <div id="logo">
+        <img src="imagens/logo-polpa.png" alt="Logo da Marca Polpa de Fruta">
+    </div>
+    <main id="card">
+            <div id="login">
+                <h1>Recuperar conta</h1>
+                <p>Para consultar sua senha  ou recuperá-la (em casos de vazameno), vá até o  setor de T.I.!</p>
+                <a class="forgot" href="login.php">Voltar ao login</a>
+            </div>
+    </main>
+</body>
+</html>
+
+<script>
+    function validarNumero(input) {
+        input.value = input.value.replace(/\D/g, '');
+    }
+</script>
+
