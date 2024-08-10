@@ -1,3 +1,12 @@
+@charset "UTF-8";
+/* Variaveis de cores */
+:root {
+    --cor1: #FFF3df;
+    --co2: #FFE8Bf;
+    --cor3: #FAC596;
+    --cor4: #f68712;
+    --cor5: #A64C14;
+}
 /* Estilos gerais */
 body {
     font-family: Arial, sans-serif;
@@ -14,7 +23,7 @@ body {
     left: 0;
     width: 80px;
     height: 100%;
-    background-color: #272727;
+    background-color: var(--cor1);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -64,33 +73,37 @@ body {
 /* Header */
 header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    background-color: #007BFF;
+    background-color: var(--co2);
     color: white;
     height: 8em;
     padding: 10px 20px;
 }
 
 .logo {
-    height: 40px;
+    height: 20px;
 }
 
 .user-info {
     display: flex;
     align-items: center;
+    color: var(--cor4);
+    margin-left: auto; /* Empurra o user-info para o canto direito */
 }
 
 .user-photo {
     border-radius: 50%;
-    height: 40px;
-    width: 40px;
-    margin-right: 10px;
+    height: 60px;
+    width: 60px;
+    margin-left: 10px; /* Adiciona uma margem entre o nome e a foto do usuário */
 }
 
 header span {
     font-size: 16px;
+    font-weight: bold;
+    padding-right: 5px;
 }
+
 
 /* Conteúdo principal */
 main {
@@ -99,14 +112,13 @@ main {
 
 /* Estilos para a seção de promoção de funcionário */
 .promotion-post {
-    margin: 20px auto;
     position: relative;
-    background-color: #4e77ff;
-    width: 80%;
+    background-color: var(--cor3);
+    width: 40%;
     max-width: 1000px;
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    padding: 20px;
+    padding: 10px;
 }
 
 .promotion-image-wrapper {
@@ -122,9 +134,8 @@ main {
 }
 
 .promotion-text {
-    color: white;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.6); /* Fundo escuro semi-transparente */
+    color: black;
+    background: #a64c144f; /* Fundo escuro semi-transparente */
     padding: 20px;
     border-radius: 8px;
     width: 90%;
@@ -134,22 +145,28 @@ main {
 .promotion-text h2,
 .promotion-text h3 {
     margin: 0;
+    padding-bottom: 5px;
 }
 
 .promotion-text p {
     margin: 5px 0;
 }
 
+.promotion-post, .calendar-post {
+    display: inline-block;
+    vertical-align: top; /* Alinha os elementos pelo topo */
+    width: 45%; /* Ajusta a largura para aumentar o espaçamento */
+    margin: 2%; /* Aumenta a margem para separar mais os elementos */
+}
 /* Estilos para a seção de calendário */
 .calendar-post {
-    margin: 20px auto;
     position: relative;
-    background-color: #ffffff;
-    width: 80%;
+    background-color: var(--cor3);
+    width: 40%;
     max-width: 1000px;
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    padding: 20px;
+    padding: 10px;
     text-align: center;
 }
 
@@ -166,7 +183,7 @@ main {
 }
 
 .calendar-header button {
-    background-color: #007BFF;
+    background-color: var(--cor5);
     color: white;
     border: none;
     padding: 10px;
@@ -192,6 +209,7 @@ main {
 .calendar th, .calendar td {
     width: 14.28%;
     height: 100px;
+    background-color: white;
     border: 1px solid #ddd;
     text-align: center;
     vertical-align: top;

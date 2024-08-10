@@ -23,20 +23,25 @@
     <!-- Barra lateral fixa -->
     <aside class="sidebar">
         <ul>
-            <li><a href="index.html" title="Página Inicial"><img src="../imagens/pag-inicial-ico.png" alt="Página Inicial"></a></li>
-            <li><a href="../pesquisa-func.html" title="Consultar Status"><img src="../imagens/status.png" alt="Consultar Status"></a></li>
+            <!-- Links para outras páginas ou funcionalidades -->
+            <li><a href="frontend/index.php" title="Página Inicial"><img src="../Icons/home.png" alt="Página Inicial"></a></li>
+            <li><a href="../pesquisa-func.html" title="Consultar Status"><img src="../Icons/status.png" alt="Consultar Status"></a></li>
         </ul>
-        <a href="#" title="Sair" class="sidebar-footer-link"><img src="../imagens/exit.png" alt="Sair"></a>
+        <!-- Link para sair ou desconectar -->
+        <a href="#" title="Sair" class="sidebar-footer-link"><img src="../Icons/sair-login.png" alt="Sair"></a>
     </aside>
 
     <!-- Conteúdo principal -->
     <div class="main-content">
         <!-- Header -->
         <header>
-            <img src="../imagens/logo-1.png" alt="Logo" class="logo" style="width: 200px; height: 200px">
+            <!-- Logotipo da empresa ou aplicação -->
+            <img src="../imagens/logo-1.png" alt="Logo" class="logo" style="width: 170px; height: 170px">
+            <!-- Informações do usuário -->
             <div class="user-info">
+                <span style="padding-right: 5px; font-weight: bold;">Olá, Galera</span>
                 <img src="../imagens/usuario.png" alt="Foto do Usuário" class="user-photo">
-                <span>Olá, Galera</span>
+                
             </div>
         </header>
 
@@ -47,7 +52,7 @@
                 <div class="promotion-image-wrapper">
                     <img src="../imagens/post-funcionario.jpg" alt="Funcionário Promovido" class="promotion-image">
                     <div class="promotion-text">
-                        <h2>Parabéns ao Funcionário Promovido!</h2>
+                        <h2 style="text-align: center;text-decoration: underline;">Parabéns ao Funcionário Promovido!</h2>
                         <h3>Pedro Henrique</h3>
                         <p><strong>Cargo Anterior:</strong> Faxineiro</p>
                         <p><strong>Novo Cargo:</strong> CEO</p>

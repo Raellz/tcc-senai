@@ -1,5 +1,12 @@
 @charset "UTF-8";
-
+/* Variaveis de cores */
+:root {
+    --cor1: #FFF3df;
+    --co2: #FFE8Bf;
+    --cor3: #FAC596;
+    --cor4: #f68712;
+    --cor5: #A64C14;
+}
 body, html {
     height: 100%;
     margin: 0;
