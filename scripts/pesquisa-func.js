@@ -1,12 +1,15 @@
 const employees = [
-    // Array contendo os dados dos funcionários, incluindo nome, foto, data de admissão, cargo e cursos
     { name: "Ana Souza", photo: "imagens/ana-souza.jpg", hireDate: "01/02/2020", position: "Desenvolvedora", courses: [{name: "Curso A", date: "01/01/2023", status: "Concluído"}, {name: "Curso B", date: "01/03/2023", status: "Pendente"}] },
-    // ... outros funcionários
+    { name: "Bruno Silva", photo: "imagens/bruno-silva.jpg", hireDate: "15/03/2019", position: "Designer", courses: [{name: "Curso C", date: "15/02/2023", status: "Concluído"}, {name: "Curso D", date: "15/04/2023", status: "Pendente"}] },
+    { name: "Carlos Oliveira", photo: "imagens/carlos-oliveira.jpg", hireDate: "20/04/2018", position: "Gerente", courses: [{name: "Curso E", date: "20/01/2023", status: "Concluído"}, {name: "Curso F", date: "20/05/2023", status: "Pendente"}] },
+    { name: "Débora Lima", photo: "imagens/debora-lima.jpg", hireDate: "10/05/2021", position: "Analista", courses: [{name: "Curso G", date: "10/02/2023", status: "Concluído"}, {name: "Curso H", date: "10/06/2023", status: "Pendente"}] },
+    { name: "Eduardo Costa", photo: "imagens/eduardo-costa.jpg", hireDate: "25/06/2022", position: "Assistente", courses: [{name: "Curso I", date: "25/03/2023", status: "Concluído"}, {name: "Curso J", date: "25/07/2023", status: "Pendente"}] },
+    { name: "Maria Gabriela", photo: "imagens/maria-gabriela.jpg", hireDate: "30/07/2023", position: "Coordenadora", courses: [{name: "Curso K", date: "30/01/2024", status: "Concluído"}, {name: "Curso L", date: "30/09/2023", status: "Pendente"}] }
 ];
-
 let lastUpdateTime = ''; // Variável para armazenar o horário da última atualização
 
 // Função para mostrar sugestões de nomes enquanto o usuário digita
+
 function showSuggestions(value) {
     const suggestionsBox = document.getElementById('suggestions');
     suggestionsBox.innerHTML = '';
