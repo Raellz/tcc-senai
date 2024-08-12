@@ -32,6 +32,20 @@ function showSuggestions(value) {
     });
 }
 
+// Adiciona um ouvinte de evento ao campo de entrada de pesquisa (searchInput)
+// Esse ouvinte detecta quando uma tecla é pressionada enquanto o campo está em foco
+document.getElementById('searchInput').addEventListener('keypress', function(event) {
+    
+    // Verifica se a tecla pressionada é a tecla "Enter"
+    // A propriedade 'key' do evento armazena o valor da tecla pressionada
+    if (event.key === 'Enter') {
+        
+        // Se a tecla "Enter" for pressionada, chama a função searchEmployee()
+        // Isso realiza a pesquisa sem a necessidade de clicar no botão de pesquisar
+        searchEmployee();
+    }
+});
+
 // Função para pesquisar um funcionário com base na entrada do usuário
 function searchEmployee() {
     const query = document.getElementById('searchInput').value.toLowerCase();
