@@ -9,12 +9,12 @@
 }
 /* Estilos gerais */
 body {
-    font-family: Arial, sans-serif;
+    font-family: system-ui,'Segoe UI','Open Sans', 'Helvetica Neue', sans-serif;;
     margin: 0;
     padding: 0;
     display: flex;
-    height: 100vh;
-    font-family: system-ui,'Segoe UI','Open Sans', 'Helvetica Neue', sans-serif;
+    flex-direction: column; /* Alinha os itens em coluna */
+    min-height: 100vh; /* Garante que a altura mínima seja 100% da viewport */
 }
 
 /* Barra lateral */
@@ -235,4 +235,33 @@ main {
     background-color: #ffffff;
     padding: 2px 4px;
     border-radius: 4px;
+}
+
+/* Conteúdo principal */
+.main-content {
+    flex: 1; /* Faz com que o conteúdo principal ocupe o espaço disponível */
+    margin-left: 80px; /* Espaço para a barra lateral */
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px; /* Espaço inferior para evitar sobreposição com o footer */
+}
+
+/* Footer */
+.footer {
+    background-color: var(--cor1); /* Usando a cor primária definida */
+    color: var(--cor5); /* Cor de texto contrastante */
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil */
+    width: 100%; /* Garante que o footer ocupe toda a largura */
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer p {
+    margin: 5px 0;
+    font-size: 14px;
 }

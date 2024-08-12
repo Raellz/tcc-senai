@@ -163,5 +163,12 @@
         // Inicializa o calendário
         updateCalendar();
     </script>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; Todos os direitos reservados ao CoDiray - program e à AGRO INDÚSTRIA POLPA DE FRUTA LTDA</p>
+                
+            </div>
+        </footer>
 </body>
 </html>
