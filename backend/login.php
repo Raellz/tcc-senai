@@ -5,11 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos/style.css">
     <link rel="stylesheet" href="estilos/media-query.css">
-<<<<<<< Updated upstream
-    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
-=======
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
->>>>>>> Stashed changes
     <title>Polpa de Fruta</title>
 </head>
 <body>
@@ -20,11 +16,15 @@
         <form action="../backend/login.php" method="post">
             <div id="login">
                 <p id="welcome">Bem vindo!</p>
-                <input class="inputLogin" id="numero" name="matricula" oninput="validarNumero(this)" type="text" maxlength="12" placeholder="Seu código de matrícula">
+                <input class="inputLogin" id="numero" name="matricula" oninput="validarNumero(this)" type="text" maxlength="12" placeholder="Seu código de matrícula"> 
+                <!-- Caixa de entrada para Matrícula !-->
             
                 <input class="inputLogin" id="password" name="password" type="password" placeholder="Digite sua senha">
+                <!-- Caixa de entrada para Senha !-->
                 <input id="entrar" type="submit" value="Entrar">
+                <!-- Botão de Entrar!-->
                 <p class="forgot"><a href="esqueceu-senha.html" class="forgot">Esqueci a senha</a></p>
+                <!-- Redirecionamento para área de 'esqueceu a senha' !-->
             </div>
         </form>
     </main>
@@ -40,6 +40,7 @@
 
 <?php 
     include 'conexao.inc';
+    // Inclusão da parte de conexão com o banco de dados
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Receber e sanitizar os dados

@@ -13,13 +13,13 @@
     <title>Polpa de Fruta</title>
     <style>
         
-
         @font-face {
             font-family: Boriboon;
             src: url(../fonts/BoriboonDemoBold-MVemP.otf) format('opentype')
             url(../fonts/BoriboonDemoBlack-8M1wA.otf) format('opentype');
             font-weight: bold;
-            font-style: normal;
+            font-style: normal; 
+            /* Adicionando fonte externa */ 
         }
 
         body {
@@ -48,6 +48,7 @@
         a {
             color: #A64C14;
         }
+
     </style>
 </head>
 <body>
@@ -58,15 +59,10 @@
             <div id="login">
                 <h1>Recuperar conta</h1>
                 <p>Para consultar sua senha  ou recuperá-la (em casos de vazameno), vá até o  setor de T.I.!</p>
-                <a class="forgot" href="login.php">Voltar ao login</a>
+                <a class="forgot" href="login.php">Voltar ao login</a> 
             </div>
     </main>
 </body>
 </html>
 
-<script>
-    function validarNumero(input) {
-        input.value = input.value.replace(/\D/g, '');
-    }
-</script>
 

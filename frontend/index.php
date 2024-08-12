@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/index.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
     <title>Página Principal</title>
 </head>
 <body>
@@ -39,7 +39,7 @@
             <img src="../imagens/logo-1.png" alt="Logo" class="logo" style="width: 170px; height: 170px">
             <!-- Informações do usuário -->
             <div class="user-info">
-                <span style="padding-right: 5px; font-weight: bold;">Olá, Galera</span>
+                <span style="padding-right: 5px; font-weight: bold;">Olá, [Funcionário]</span>
                 <img src="../imagens/usuario.png" alt="Foto do Usuário" class="user-photo">
                 
             </div>
@@ -52,9 +52,9 @@
                 <div class="promotion-image-wrapper">
                     <img src="../imagens/post-funcionario.jpg" alt="Funcionário Promovido" class="promotion-image">
                     <div class="promotion-text">
-                        <h2 style="text-align: center;text-decoration: underline;">Parabéns ao Funcionário Promovido!</h2>
+                        <h2 style="text-align: center; color: black;">Parabéns ao funcionário promovido!</h2>
                         <h3>Pedro Henrique</h3>
-                        <p><strong>Cargo Anterior:</strong> Faxineiro</p>
+                        <p><strong>Cargo anterior:</strong> Faxineiro</p>
                         <p><strong>Novo Cargo:</strong> CEO</p>
                         <p>Estamos muito felizes em anunciar que <strong>Pedro Henrique</strong> foi promovido a <strong>CEO</strong>. Sua dedicação e esforço têm sido excepcionais, e esta promoção é um reflexo do seu trabalho árduo. Parabéns!</p>
                     </div>
