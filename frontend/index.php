@@ -24,8 +24,8 @@
     <aside class="sidebar">
         <ul>
             <!-- Links para outras páginas ou funcionalidades -->
-            <li><a href="frontend/index.php" title="Página Inicial"><img src="../Icons/home.png" alt="Página Inicial"></a></li>
-            <li><a href="../pesquisa-func.html" title="Consultar Status"><img src="../Icons/status.png" alt="Consultar Status"></a></li>
+            <li><a href="frontend/index.php" title="Página Inicial"><img src="../Icons/home-escuro.png" alt="Página Inicial"></a></li>
+            <li><a href="../pesquisa-func.html" title="Consultar Status"><img src="../Icons/status-claro.png" alt="Consultar Status"></a></li>
         </ul>
         <!-- Link para sair ou desconectar -->
         <a href="#" title="Sair" class="sidebar-footer-link"><img src="../Icons/sair-login.png" alt="Sair"></a>
