@@ -28,7 +28,7 @@
             <li><a href="../pesquisa-func.html" title="Consultar Status"><img src="../Icons/status-claro.png" alt="Consultar Status"></a></li>
         </ul>
         <!-- Link para sair ou desconectar -->
-        <a href="#" title="Sair" class="sidebar-footer-link"><img src="../Icons/sair-login.png" alt="Sair"></a>
+        <a href="../backend/login.php" title="Sair" class="sidebar-footer-link"><img src="../Icons/sair-login.png" alt="Sair"></a>
     </aside>
 
     <!-- Conteúdo principal -->
