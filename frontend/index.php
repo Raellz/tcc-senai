@@ -36,7 +36,7 @@
         <!-- Header -->
         <header>
             <!-- Logotipo da empresa ou aplicação -->
-            <img src="../imagens/logo-1.png" alt="Logo" class="logo" style="width: 170px; height: 170px">
+            <img src="../imagens/logo-1.png" alt="Logo" class="logo" style="width: 20rem; height: 20rem">
             <!-- Informações do usuário -->
             <div class="user-info">
                 <span style="padding-right: 5px; font-weight: bold;">Olá, [Funcionário]</span>

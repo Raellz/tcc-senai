@@ -26,13 +26,13 @@ p#welcome {
     display: flex;
     justify-content: center;
     justify-items: center;
-    padding: 15px;
+    padding: 10px;
     max-width: 165px;
     text-align: center;
-    color: white;
-    background-color: #F58C2D;
+    color: #A64C14;
     font-family: system-ui,'Segoe UI','Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: bolder;
+    font-size: 1.9rem;
     border-radius: 3px;
 }
 
@@ -52,15 +52,15 @@ p#welcome {
     border-radius: 3px;
     border: 1px solid #ccc;
     outline: none;
-    background-color: #F2BD82;
+    background-color: white;
     margin-bottom: -15px;
 }
 
 input::placeholder {
-    color: #FAEED9;
+    color: rgb(121, 121, 121);
     font-family: system-ui,'Segoe UI','Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 14.5px;
-    text-align: center;
+    text-align: justify;
 }
 
 #entrar {
@@ -82,6 +82,8 @@ a.forgot {
     background-color: #F2BD82;
     padding: 5px 15px 5px 15px;
     border-radius: 3px;
+    font-family: system-ui,'Segoe UI','Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
 }
 
 #logo {
