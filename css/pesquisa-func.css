@@ -227,3 +227,14 @@ div#conteiner {
 #lastUpdatedContainer .styled-button:active {
     background-color: #3e8e41;
 }
+
+
+.status-concluido {
+    color: green;
+    font-weight: bold;
+}
+
+.status-pendente {
+    color: red;
+    font-weight: bold;
+}

@@ -86,7 +86,8 @@ function showModal(employee) {
     // Gera a tabela de cursos do funcionário
     let coursesHTML = '<table><tr><th>Curso</th><th>Data</th><th>Status</th></tr>';
     employee.courses.forEach(course => {
-        coursesHTML += `<tr><td>${course.name}</td><td>${course.date}</td><td>${course.status}</td></tr>`;
+        const statusClass = course.status === "Concluído" ? 'status-concluido' : 'status-pendente';
+        coursesHTML += `<tr><td>${course.name}</td><td>${course.date}</td><td class="${statusClass}">${course.status}</td></tr>`;
     });
     coursesHTML += '</table>';
 
@@ -102,6 +103,7 @@ function showModal(employee) {
 
     modal.style.display = 'block'; // Exibe a modal
 }
+
 
 // Função para fechar a modal
 function closeModal() {
