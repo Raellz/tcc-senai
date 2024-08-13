@@ -1,6 +1,6 @@
 const employees = [
-    { name: "Ana Souza", photo: "imagens/ana-souza.jpg", hireDate: "01/02/2020", position: "Desenvolvedora", courses: [{name: "Curso A", date: "01/01/2023", status: "Concluído"}, {name: "Curso B", date: "01/03/2023", status: "Pendente"}] },
-    { name: "Bruno Silva", photo: "imagens/bruno-silva.jpg", hireDate: "15/03/2019", position: "Designer", courses: [{name: "Curso C", date: "15/02/2023", status: "Concluído"}, {name: "Curso D", date: "15/04/2023", status: "Pendente"}] },
+    { name: "Ana Souza", photo: "imagens/ana-souza.jpg", hireDate: "01/02/2020", position: "Operadora de Máquina", courses: [{name: "Segurança do Trabalho", date: "07/01/2023", status: "Concluído"}, {name: "Operação de Máquinas Agrícolas", date: "24/07/2019", status: "Vencido"}] },
+    { name: "Bruno Silva", photo: "imagens/bruno-silva.jpg", hireDate: "15/03/2019", position: "Técnico em Manutenção", courses: [{name: "Manutenção de Equipamentos", date: "15/04/2023", status: "Concluído"}, {name: "Segurança no Trabalho", date: "30/02/2014", status: "Vencido"}, {name: "Primeiro Socorros", date: "31/09/2023", status: "Concluído"}]  },
     { name: "Carlos Oliveira", photo: "imagens/carlos-oliveira.jpg", hireDate: "20/04/2018", position: "Gerente", courses: [{name: "Curso E", date: "20/01/2023", status: "Concluído"}, {name: "Curso F", date: "20/05/2023", status: "Pendente"}] },
     { name: "Débora Lima", photo: "imagens/debora-lima.jpg", hireDate: "10/05/2021", position: "Analista", courses: [{name: "Curso G", date: "10/02/2023", status: "Concluído"}, {name: "Curso H", date: "10/06/2023", status: "Pendente"}] },
     { name: "Eduardo Costa", photo: "imagens/eduardo-costa.jpg", hireDate: "25/06/2022", position: "Assistente", courses: [{name: "Curso I", date: "25/03/2023", status: "Concluído"}, {name: "Curso J", date: "25/07/2023", status: "Pendente"}] },
@@ -66,7 +66,7 @@ function searchEmployee() {
 
         // Estrutura HTML do cartão de resultado
         resultCard.innerHTML = `
-            <img src="${employee.photo}" alt="${employee.name}">
+            <img src="${employee.photo}" alt="${employee.name}" style="object-fit: cover;">
             <div class="details">
                 <p class="name">${employee.name}</p>
                 <p>Data de Admissão: ${employee.hireDate}</p>
@@ -93,7 +93,7 @@ function showModal(employee) {
 
     // Estrutura HTML da modal
     modalContent.innerHTML = `
-        <img src="${employee.photo}" alt="${employee.name}" style="width: 100px; height: 100px; border-radius: 50%;">
+        <img src="${employee.photo}" alt="${employee.name}" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover;">
         <h2>${employee.name}</h2>
         <p>Função: ${employee.position}</p>
         <h3>Cursos de Treinamento:</h3>
